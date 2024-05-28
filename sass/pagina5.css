@@ -1,0 +1,145 @@
+.container {
+  margin: 12px;
+  margin-top: 20px;
+}
+
+body {
+  background-image: linear-gradient(to left, rgb(230, 238, 156), rgb(175, 180, 43));
+  font-size: px-to-rem(18px);
+}
+
+nav {
+  height: 130px;
+  width: 99%;
+  background-color: rgba(163, 163, 163, 0.514);
+  margin-bottom: 100px;
+}
+nav ul {
+  float: left;
+  margin-left: 30px;
+}
+nav ul li {
+  margin: 20px;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li header {
+  font-size: 35px;
+  color: white;
+  text-shadow: 4px 0px 4px #000;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: white;
+  color: #09767e;
+  transition: 0.5;
+}
+
+article {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.bg-color-1,
+.bg-color-2,
+.bg-color-3 {
+  width: 60%;
+  height: 160px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 0 2px #000;
+  font-size: 30px;
+  margin-top: 20px;
+  border: 3px solid white;
+}
+
+span {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.contenedor-Small, .contenedor-Medium, .contenedor-Large {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-shadow: 2px 0 2px #000;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 3px solid white;
+  background-color: #FFFDE7;
+}
+
+.bg-color-1 {
+  background-color: #FFCCBC;
+}
+
+.bg-color-2 {
+  background-color: #E1F5FE;
+}
+
+.bg-color-3 {
+  background-color: #E0F2F1;
+}
+
+.contenedor-Small {
+  width: 100px;
+  height: 100px;
+  background-color: #D0ECE7;
+}
+
+.contenedor-Medium {
+  width: 200px;
+  height: 200px;
+  background-color: #D0ECE7;
+}
+
+.contenedor-Large {
+  width: 300px;
+  height: 300px;
+  background-color: #D0ECE7;
+}
+
+main {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.box-1, .box-2, .box-3 {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #58caff;
+  color: white;
+  border: 3px solid white;
+}
+
+.box-1 {
+  opacity: 0.1;
+}
+
+.box-2 {
+  opacity: 0.2;
+}
+
+.box-3 {
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=pagina5.css.map */

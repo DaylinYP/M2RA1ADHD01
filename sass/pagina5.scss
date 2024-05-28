@@ -1,0 +1,148 @@
+//cantidad de columnas
+//generar 1 hasta 12 columnas
+$primary-color: #00497a;
+$tercer-color: white;
+$color-hoverletra: #09767e;
+$font-stack: Helvetica, sans-serif;
+
+
+// Mixin
+
+@mixin directiva-style {
+    width: 60%;
+    height: 160px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-shadow: 2px 0 2px #000;
+    font-size: 30px;
+    margin-top: 20px;
+    border: 3px solid white;
+}
+@mixin espacios {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+@mixin each-style{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-shadow: 2px 0 2px #000;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 3px solid white;
+    background-color: #FFFDE7 ;
+}
+.container {
+    margin: 12px;
+    margin-top: 20px;
+}
+
+body {
+    background-image: linear-gradient(to left, rgb(230, 238, 156), rgb(175, 180, 43));
+    font-size: px-to-rem(18px);
+}
+
+nav {
+    height: 130px;
+    width: 99%;
+    background-color: rgba(163, 163, 163, 0.514);
+    margin-bottom: 100px;
+
+    ul {
+        float: left;
+        margin-left: 30px;
+
+        li {
+            margin: 20px;
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+
+            header {
+                font-size: 35px;
+                color: $tercer-color;
+                text-shadow: 4px 0px 4px #000;
+            }
+
+            a {
+                text-decoration: none;
+                color: $tercer-color;
+                font-size: 18px;
+                padding: 7px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $tercer-color;
+                    color: $color-hoverletra;
+                    transition: 0.5;
+
+                }
+            }
+        }
+    }
+
+}
+
+
+article {
+    @include espacios;
+}
+
+.bg-color-1,
+.bg-color-2,
+.bg-color-3 {
+    @include directiva-style;
+}
+
+span {
+    @include espacios;
+}
+.contenedor-Small, .contenedor-Medium, .contenedor-Large{
+    @include each-style;
+
+}
+
+//DIRECTIVA FOR
+$colors: #FFCCBC, #E1F5FE, #E0F2F1;
+
+@for $i from 1 through length($colors) {
+    .bg-color-#{$i} {
+        background-color: nth($colors, $i);
+    }
+}
+
+//DIRECTIVA EACH
+$sizes: Small 100px, Medium 200px, Large 300px;
+
+@each $name, $size in $sizes {
+    .contenedor-#{$name} {
+        width: $size;
+        height: $size;
+        background-color: #D0ECE7;
+    }
+}
+
+//DIRECTIVA WHILE
+main{
+    @include espacios;
+}
+.box-1, .box-2, .box-3{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #58caff;
+    color: white;
+    border: 3px solid white;
+}
+$i: 1;
+
+@while $i <= 3 {
+  .box-#{$i} {
+    opacity: $i * 0.1;
+  }
+  $i: $i + 1;
+}

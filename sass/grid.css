@@ -1,0 +1,191 @@
+body {
+  background-image: linear-gradient(to left, pink, orange);
+  font-size: px-to-rem(18px);
+}
+
+.grid {
+  display: grid;
+}
+
+div {
+  margin-top: 10px;
+  margin-top: 10px;
+  background-color: rgba(192, 96, 52, 0.808);
+  color: white;
+  border-color: 3px solid white;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1, h2 {
+  color: white;
+  text-shadow: 4px 1px #000000;
+  text-align: center;
+}
+
+/*Se coloca @for para llamar al ciclo
+desde la variable i hasta columnas*/
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-1 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(1, 100%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-2 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(2, 50%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-3 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(3, 33.3333333333%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-4 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(4, 25%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-5 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(5, 20%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-6 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(6, 16.6666666667%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-7 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(7, 14.2857142857%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-8 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(8, 12.5%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-9 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(9, 11.1111111111%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-10 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(10, 10%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-11 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(11, 9.0909090909%);
+}
+
+/*De primero va encontrar una clase y despues menos y despues
+un numero que va a estar dando lo que es i (como un contador)*/
+.grid-12 {
+  /*Repite varias columnas 
+  Si se coloca 1 en el percentage, 1 es el 100%
+  Dividido entre la variable i para que calcule automaticamente 
+  el resultado de las variables*/
+  grid-template-columns: repeat(12, 8.3333333333%);
+}
+
+nav {
+  height: 160px;
+  width: 100%;
+}
+nav ul {
+  float: left;
+  margin-left: 30px;
+}
+nav ul li {
+  margin: 20px;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li header {
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 0px 2px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: white;
+  color: #09767e;
+  transition: 0.5;
+}
+
+body {
+  font-size: 1.125rem;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=grid.css.map */

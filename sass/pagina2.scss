@@ -1,0 +1,149 @@
+// Variables
+$primary-color: #00497a;
+$secondary-color: rgba(0, 225, 255, 0.5);
+$tercer-color: white;
+$color-hoverletra: #09767e;
+$font-stack: Helvetica, sans-serif;
+
+//VARIABLES PAGINA 2
+$color-company: #007272;
+$pad-defecto: 30px;
+$radius: 45px 0 45px 0;
+
+// Mixin
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius; // COMPATIBLE CON CHROME
+    -moz-border-radius: $radius; // COMPATIBLE CON MOZILLA
+    -ms-border-radius: $radius; // COMPATIBLE CON MICROSOFT ( EXPLORER O EDGE )
+    border-radius: $radius;
+}
+
+.container {
+    @include border-radius(5px);
+    padding: 15px;
+    margin: 12px;
+    margin-top: 20px;
+}
+
+
+body {
+    background-image: linear-gradient(to left, rgb(8, 37, 43), rgb(2, 78, 92));
+}
+
+nav {
+    height: 130px;
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+
+    ul {
+        float: left;
+        margin-left: 30px;
+
+        li {
+            margin: 20px;
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+
+            header {
+                font-size: 35px;
+                color: $tercer-color;
+                text-shadow: 2px 0px 2px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $tercer-color;
+                font-size: 18px;
+                padding: 7px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $tercer-color;
+                    color: $color-hoverletra;
+                    transition: 0.5;
+
+                }
+            }
+        }
+    }
+
+}
+
+@mixin border {
+    border: 3px solid white;
+    border-radius: $radius;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: $pad-defecto;
+}
+
+
+@mixin box ($height: 100px, $width: 200px) {
+    height: $height;
+    width: $width;
+    box-shadow: 8px 5px #000;
+    text-align: center;
+    color: white;
+
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.directivas1 {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    height: 470px;
+    color: $tercer-color;
+    text-align: justify;
+
+    .articleDirectivas1 {
+        @include border;
+
+    }
+
+    .articleDirectivas2 {
+        @include border;
+
+    }
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+span {
+    @include flex;
+
+    .box {
+        @include box;
+        background-color: #e2ba34;
+    }
+}
+
+.espacio-div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100px;
+    width: 100%;
+    border: 3px solid white
+}
+
+.span2 {
+    @include flex;
+
+    .box2 {
+        @extend .container;
+        @include box;
+    }
+}

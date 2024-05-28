@@ -1,0 +1,134 @@
+//cantidad de columnas
+//generar 1 hasta 12 columnas
+$background: #007483;
+$columnas: 12;
+
+$primary-color: #00497a;
+$secondary-color: rgba(0, 225, 255, 0.5);
+$tercer-color: white;
+$color-hoverletra: #09767e;
+$font-stack: Helvetica, sans-serif;
+
+
+// Mixin
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius; // COMPATIBLE CON CHROME
+  -moz-border-radius: $radius; // COMPATIBLE CON MOZILLA
+  -ms-border-radius: $radius; // COMPATIBLE CON MICROSOFT ( EXPLORER O EDGE )
+  border-radius: $radius;
+}
+
+.container {
+  @include border-radius(5px);
+  padding: 15px;
+  margin: 12px;
+  margin-top: 20px;
+}
+
+body {
+  background-image: linear-gradient(to left, rgb(88, 0, 66), rgb(124, 55, 133));
+  font-size: px-to-rem(18px);
+}
+
+nav {
+  height: 130px;
+  width: 99%;
+  background-color: rgba(163, 163, 163, 0.514);
+  margin-bottom: 100px;
+
+
+  ul {
+    float: left;
+    margin-left: 30px;
+
+    li {
+      margin: 20px;
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+
+      header {
+        font-size: 35px;
+        color: $tercer-color;
+        text-shadow: 4px 0px 4px #000;
+      }
+
+      a {
+        text-decoration: none;
+        color: $tercer-color;
+        font-size: 18px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $tercer-color;
+          color: $color-hoverletra;
+          transition: 0.5;
+
+        }
+      }
+    }
+  }
+
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.div-Botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-styles($button) {
+  @if $button ==normal {
+    background-color: rgb(134, 93, 131);
+    color: white;
+    border: 3px solid rgb(201, 169, 211);
+  }
+
+  @else if $button ==hover {
+    background-color: rgb(201, 169, 211);
+    color: rgb(0, 0, 0);
+    border: 3px solid black;
+  }
+
+  @else if $button ==active {
+    background-color: black;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(201, 169, 211);
+  }
+
+  @else {
+    background-color: rgb(149, 110, 161);
+    color: darkgray;
+    border: 3px solid rgb(134, 93, 131);
+  }
+}
+
+.button {
+  @include button-styles(normal);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-top: 100px;
+  width: 50%;
+  height: 180px;
+  justify-content: center;
+
+
+  &:hover {
+    @include button-styles(hover);
+  }
+
+  &:active {
+    @include button-styles(active);
+  }
+}

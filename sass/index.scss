@@ -1,0 +1,87 @@
+// Variables
+$primary-color: #00497a;
+$secondary-color: rgba(0, 225, 255, 0.5);
+$tercer-color: white;
+$color-hoverletra: #09767e;
+$font-stack: Helvetica, sans-serif;
+
+//VARIABLES PAGINA 2
+$color-company: #007272;
+$pad-defecto: 30px;
+$radius: 45px 0 45px 0;
+
+#titulo{
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+ 
+}
+// Mixin
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius; // COMPATIBLE CON CHROME
+    -moz-border-radius: $radius; // COMPATIBLE CON MOZILLA
+    -ms-border-radius: $radius; // COMPATIBLE CON MICROSOFT ( EXPLORER O EDGE )
+    border-radius: $radius;
+}
+
+// Uso de variables y mixin
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    background-image: linear-gradient(to left, black, rgb(79, 67, 67));
+    margin: 50px;
+}
+
+.container {
+    @include border-radius(5px);
+    padding: 15px;
+    margin: 12px;
+    margin-top: 20px;
+}
+
+
+// Anidación
+nav {
+    height: 130px;
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #007272;
+
+
+    ul {
+        float: left;
+        margin-left: 30px;
+
+        li {
+            margin: 20px;
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+
+            header {
+                font-size: 35px;
+                color: $tercer-color;
+                text-shadow: 2px 0px 2px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $tercer-color;
+                font-size: 18px;
+                padding: 7px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $tercer-color;
+                    color: $color-hoverletra;
+                    transition: 0.5;
+
+                }
+            }
+        }
+    }
+
+}
+
